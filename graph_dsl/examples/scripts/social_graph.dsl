@@ -1,0 +1,11 @@
+# Example DSL script: build a social-friendship graph.
+
+LOAD users;
+LOAD friendships;
+
+NODE Person KEY id FROM users;
+
+EDGE FriendOf
+    FROM friendships
+    SOURCE person_a
+    TARGET person_b;
