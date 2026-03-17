@@ -1,0 +1,13 @@
+- add associate proffessor
+- add more references
+- when having short words (like DSL) first time introduce it in full form then it can be used as DSL
+- extend introduction
+- remove Midterm 1 and make it "Domain Analysis"
+- add problem statement, then proposed solution and only then domain description
+- add statisitcs
+- start with introducing the domain (the domain of DSLs)
+- syntax is a part of the grammar and should be a part of the second grammar chapter (remove it
+and place it in the second chapter)
+- firstly list all competitors and add references to all of those competitors
+- bibliography minimum 20
+- add grammar and parser with an AST

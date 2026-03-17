@@ -1,5 +1,3 @@
-# Example DSL script: build a social-friendship graph.
-
 LOAD users;
 LOAD friendships;
 

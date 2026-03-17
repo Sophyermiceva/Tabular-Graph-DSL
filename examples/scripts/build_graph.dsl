@@ -1,7 +1,3 @@
-# Example DSL script: build a user-product purchase graph.
-#
-# Data files expected in ../data/
-
 LOAD users;
 LOAD orders;
 
@@ -13,4 +9,5 @@ EDGE Bought
     FROM orders
     SOURCE user_id
     TARGET product_id
-    WEIGHT amount;
+    WEIGHT amount
+    WHERE (amount > 5) AND (amount < 10);

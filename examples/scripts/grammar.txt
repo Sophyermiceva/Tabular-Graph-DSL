@@ -1,0 +1,43 @@
+program         ::= { statement }
+
+statement       ::= load_stmt
+                  | node_stmt
+                  | edge_stmt
+
+load_stmt       ::= "LOAD" identifier ";"
+
+node_stmt       ::= "NODE" identifier
+                    "KEY" identifier
+                    "FROM" identifier
+                    ";"
+
+edge_stmt       ::= "EDGE" identifier
+                    "FROM" identifier
+                    "SOURCE" identifier
+                    "TARGET" identifier
+                    [ weight_clause ]
+                    [ where_clause ]
+                    ";"
+
+weight_clause   ::= "WEIGHT" identifier
+
+where_clause    ::= "WHERE" condition
+
+condition       ::= condition "AND" condition
+                  | condition "OR" condition
+                  | "(" condition ")"
+                  | comparison
+
+comparison      ::= identifier comparator value
+
+comparator      ::= ">" | "<" | ">=" | "<=" | "=" | "!="
+
+value           ::= number | identifier
+
+identifier      ::= letter { letter | digit | "_" }
+
+number          ::= digit { digit }
+
+letter          ::= "A".."Z" | "a".."z"
+
+digit           ::= "0".."9"
