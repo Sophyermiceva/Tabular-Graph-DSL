@@ -104,11 +104,7 @@ class GraphvizTranspiler(ProgramRunner[str]):
                 node_id,
                 {"label": "unknown", "display_name": str(node_id)},
             )
-            display_name = node_data["display_name"]
-            if display_name == str(node_id):
-                label = display_name
-            else:
-                label = f"{display_name}\n({node_id})"
+            label = node_data["display_name"]
             lines.append(
                 f'  "{_escape(node_id)}" '
                 f'[label="{_escape(label)}", tooltip="{_escape(node_data["label"])}"];'

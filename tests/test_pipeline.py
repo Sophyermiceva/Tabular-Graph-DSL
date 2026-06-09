@@ -395,8 +395,8 @@ class TestGraphvizBackend(unittest.TestCase):
         dot = transpiler.run(ast)
 
         self.assertIn('digraph DSLGraph {', dot)
-        self.assertIn('"1" [label="Alice\\n(1)"', dot)
-        self.assertIn('"2" [label="Bob\\n(2)"', dot)
+        self.assertIn('"1" [label="Alice"', dot)
+        self.assertIn('"2" [label="Bob"', dot)
         self.assertIn('"P1" [label="P1"', dot)
         self.assertIn('"2" -> "P1" [label="Bought\\nw=5.0"]', dot)
 
